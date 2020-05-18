@@ -1,5 +1,3 @@
-# aplicacao.py
-
 from flask import Flask
 
 

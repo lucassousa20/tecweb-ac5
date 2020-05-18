@@ -1,4 +1,3 @@
-## models.py
 from banco import bd
 
 

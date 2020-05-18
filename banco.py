@@ -1,5 +1,3 @@
-# banco.py
-
 import sqlite3
 from flask import g
 from aplicacao import app

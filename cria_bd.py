@@ -1,6 +1,3 @@
-# cria_bd.py
-# Execute esse arquivo para atualizar o banco
-
 from aplicacao import app
 from contextlib import closing
 from banco import conectar_bd
