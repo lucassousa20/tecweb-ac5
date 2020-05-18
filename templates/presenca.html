@@ -1,0 +1,30 @@
+<!-- templates/mensagem.html -->
+
+{% extends 'base.html' %}
+
+{% block conteudo %}
+
+<form action='/presenca/gravar' method='post'>
+  <p>
+    <label for='email'>E-mail:</label>
+    <input id='email' type='text' name='email'>
+  </p>
+  <p>
+    <input type="radio" id="presente" name="presenca" value="presente">
+    <label for="presente">Presente</label>
+    <input type="radio" id="ausente" name="presenca" value="ausente">
+    <label for="ausente">Ausente</label>
+  </p>
+  <p>Pergunta: O que é MVC?</p>
+  <label for='pergunta'>Resposta</label>
+  <input id='pergunta' type='text' name='resposta'>
+  <p>
+    <label for='comentario'>Comentario:</label>
+    <textarea id='comentario' name='comentario'></textarea>
+  </p>
+  <p>
+    <input type='submit' value='Enviar'>
+  </p>
+</form>
+
+{% endblock %}
