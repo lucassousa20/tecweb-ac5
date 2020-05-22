@@ -73,17 +73,19 @@ def gravar_presenca():
 
 @app.route('/lucas')
 def lucas():
-    ## Insere opções no menu
     menu = []
-    ## Cada opção no menu é um dicionário
-    menu.append({'active': True, # active informa se a opção está ativa, e se estiver, destaca ela na página
-                'href': '/', # href é o caminho que deve ser aberto pela opção
-                'texto': 'Página principal'}) # texto é o texto exibido no menu para a opção
     menu.append({'active': False,
-                'href': '/mensagem',
-                'texto': 'Escrever mensagem'})
+                 'href': '/',
+                 'texto': 'Página principal'})
+    menu.append({'active': False,
+                 'href': '/presenca',
+                 'texto': 'Presença'})
+    menu.append({'active': False,
+                 'href': '/presencas',
+                 'texto': 'Presenças Computadas'})
 
-    context = {'titulo': 'Lucas Sousa'}
+    context = {'titulo': 'Lucas Sousa',
+                'menu': menu}
 
     return render_template('lucas.html', **context)
 

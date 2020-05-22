@@ -4,9 +4,11 @@
 {% block conteudo %}
 
   {% for presenca in presencas %}
-    <p><b>{{ presenca.email }}</b>: {{ post.presenca }}</p>
+  <p><b>Email:</b> {{ presenca.email }}</p>
+  <p><b>Presença:</b> {{ presenca.presenca }}</p>
+
   {% else %}
-    <p>Nenhuma presença</p>
+  <p>Nenhuma presença</p>
   {% endfor %}
 {% endblock %}
       

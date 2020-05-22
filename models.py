@@ -21,12 +21,10 @@ class Presenca:
     @staticmethod
     def recupera_todas():
         ## Usamos o objeto retornado por bd() para realizar comandos sql
-        sql = '''SELECT email, presenca FROM PRESENCA ORDER BY ID DESC'''
+        sql = '''select email, presenca, resposta, comentario from presenca order by id desc'''
         cur = bd().execute(sql)
-        ## Montamos dicionário dicionários com os resultados da consulta para passar para a view
         presencas = []
-        for email, presenca in cur.fetchall(): # fetchall() gera uma lista com os resultados:
-            presenca = Presenca(email, presenca)
+        for email, presenca, resposta, comentario in cur.fetchall():
+            presenca = Presenca(email, presenca, resposta, comentario)
             presencas.append(presenca)
-
         return presencas
