@@ -7,7 +7,7 @@ from models import Presenca
 
 @app.route('/')
 def index():
-    ## Insere opções no menu
+    presencas = Presenca.recupera_todas()
     menu = []
     ## Cada opção no menu é um dicionário
     menu.append({'active': True, # active informa se a opção está ativa, e se estiver, destaca ela na página
@@ -17,12 +17,16 @@ def index():
                 'href': '/presenca',
                 'texto': 'Presença'})
     menu.append({'active': False,
-                'href': '/presencas',
-                'texto': 'Presenças Computadas'})
+                'href':'/lucas',
+                'texto': 'Lucas Souza'})
+    menu.append({'active': False,
+                'href':'/lucas',
+                'texto': 'Maria Vitoria'})
 
     ## Inserimos tudo que foi criado no dicionário context, ele será passado para a view
-    context = {'titulo': 'Integrantes',
-            'menu': menu}
+    context = {'titulo': 'Página principal',
+            'menu': menu,
+            'presencas': presencas}
 
     return render_template('index.html', **context)
 
@@ -36,40 +40,22 @@ def presenca():
                  'href': '/presenca',
                  'texto': 'Presença'})
     menu.append({'active': False,
-                 'href': '/presencas',
-                 'texto': 'Presenças Computadas'})
+                'href':'/lucas',
+                'texto': 'Lucas Souza'})
+    menu.append({'active': False,
+                'href':'/maria',
+                'texto': 'Maria Vitoria'})
 
     context = {'titulo': 'Presença',
                'menu': menu}
     return render_template('presenca.html', **context)
 
-
-@app.route('/presencas')
-def presencas():
-    presencas = Presenca.recupera_todas()
-    menu = []
-    menu.append({'active': False,
-                'href': '/',    
-                'texto': 'Página principal'})
-    menu.append({'active': False,
-                'href': '/presenca',
-                'texto': 'Presença'})
-    menu.append({'active': True,
-                'href': '/presencas',
-                'texto': 'Presenças Computadas'})
-
-    context = {'titulo': 'Presenças Computadas',
-            'menu': menu,
-            'presencas': presencas}
-
-    return render_template('presencas.html', **context)
-
-
 @app.route('/presenca/gravar', methods=['POST'])
 def gravar_presenca():
-    presenca = Presenca(request.form['email'], request.form['presenca'], request.form['resposta'], request.form['comentario'])
-    presenca.gravar_presenca()
+    presencas = Presenca(request.form['email'], request.form['presenca'], request.form['resposta'], request.form['comentario'])
+    presencas.gravar_presenca()
     return redirect('/')
+
 
 @app.route('/lucas')
 def lucas():
@@ -80,14 +66,38 @@ def lucas():
     menu.append({'active': False,
                  'href': '/presenca',
                  'texto': 'Presença'})
+    menu.append({'active': True,
+                'href':'/lucas',
+                'texto': 'Lucas Souza'})
     menu.append({'active': False,
-                 'href': '/presencas',
-                 'texto': 'Presenças Computadas'})
+                'href':'/maria',
+                'texto': 'Maria Vitoria'})
 
     context = {'titulo': 'Lucas Sousa',
                 'menu': menu}
 
     return render_template('lucas.html', **context)
+
+@app.route('/maria')
+def maria():
+    menu = []
+    menu.append({'active': False,
+                 'href': '/',
+                 'texto': 'Página principal'})
+    menu.append({'active': False,
+                 'href': '/presenca',
+                 'texto': 'Presença'})
+    menu.append({'active': False,
+                'href':'/lucas',
+                'texto': 'Lucas Souza'})
+    menu.append({'active': True,
+                'href':'/maria',
+                'texto': 'Maria Vitoria'})
+
+    context = {'titulo': 'Maria Vitoria',
+                'menu': menu}
+
+    return render_template('Maria.html', **context)
 
 
 app.run()

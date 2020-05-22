@@ -1,6 +1,14 @@
 <!-- index.html -->
 {% extends 'base.html' %}
-
+ 
 {% block conteudo %}
-  <h3><a href="lucas">Lucas Sousa</a></h3>
+
+  {% for presenca in presencas %}
+  <p><b>Email:</b> {{ presenca.email }}</p>
+  <p><b>Presença:</b> {{ presenca.presenca }}</p>
+  <p><b>Resposta:</b> {{ presenca.resposta }}</p>
+  <p><b>Comentário:</b> {{presenca.comentario }}</p>
+  {% else %}
+  <p>Nenhuma presença</p>
+  {% endfor %}
 {% endblock %}
