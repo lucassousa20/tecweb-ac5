@@ -1,4 +1,9 @@
 body {
   background-color: blueviolet;
+}
 
+#texto{
+  position: absolute;
+  bottom:0;
+  margin-left: 350px;
 }
