@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Projeto base - Flask
 
 # Inicialização
@@ -68,3 +69,9 @@ Script para criação do banco.
 
 ### esquema.sql
 Contém a estrutura do banco de dados. Para alterar o ba
+=======
+Nome: Leandro de Lima Monteiro RA: 1901699 
+Nome: Lucas dos Santos Sousa RA: 1902348 
+Nome: Kennedy da Silva Cardoso RA: 1901697 
+Nome: Maria Vitoria Ferreira da Silva RA: 1901934
+>>>>>>> 07d35e629919e75102471ad1fe1f468161380ec5
