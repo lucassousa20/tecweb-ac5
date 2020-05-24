@@ -23,13 +23,7 @@ Então criamos o ambiente virtual com os pacotes necessário para esse projeto:
 ```
 virtualenv venv
 source venv/Scripts/activate
-pip install -r requirements.txt
-```
-
-Depois precisamos realizar a criação do banco de dados:
-
-```
-python cria_bd.py
+pip install -r requirements.python cria_bd.py
 ```
 
 A partir daí podemos executar e visualizar o projeto.
@@ -39,7 +33,7 @@ Para executar:
 python controllers.py
 ```
 
-
+,,
 ## Estrutura
 
 Esse projeto contém a seguinte estrutura:
@@ -73,5 +67,4 @@ Contém as funções necessárias para conectar no banco.
 Script para criação do banco.
 
 ### esquema.sql
-
-Contém a estrutura do banco de dados. Para alterar o banco, altere esse arquivo.
+Contém a estrutura do banco de dados. Para alterar o ba
