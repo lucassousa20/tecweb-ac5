@@ -20,7 +20,6 @@ class Presenca:
 
     @staticmethod
     def recupera_todas():
-        ## Usamos o objeto retornado por bd() para realizar comandos sql
         sql = '''select email, presenca, resposta, comentario from presenca order by id desc'''
         cur = bd().execute(sql)
         presencas = []
