@@ -1,3 +1,15 @@
 body{
     background-color: aqua;
 }
+
+h1{
+    font-family: fantasy;
+}
+
+#text{
+    position: absolute;
+    bottom:0;
+    align-items: center;
+    margin-left: 350px;
+    font-size: large;
+}

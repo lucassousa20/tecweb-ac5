@@ -1,13 +1,19 @@
 <!-- index.html -->
 {% extends 'base.html' %}
- 
+
+{% block css %}
+  <link rel="stylesheet" href="static/css/index.css">
+{% endblock %}
+
 {% block conteudo %}
 
   {% for presenca in presencas %}
+  <div id="respostas">
   <p><b>Email:</b> {{ presenca.email }}</p>
   <p><b>Presença:</b> {{ presenca.presenca }}</p>
   <p><b>Resposta:</b> {{ presenca.resposta }}</p>
   <p><b>Comentário:</b> {{presenca.comentario }}</p>
+</div>
   {% else %}
   <p>Nenhuma presença</p>
   {% endfor %}
