@@ -2,17 +2,32 @@ body{
     background-color: black;
 }
 
-h1{
-    color: aqua;
-    display: flex;
-}
-
 .lateral_direita{
     position: absolute;
-    height: 789px;
-    width: 592;
-    z-index: -1;
+    padding: 0;
     right: 1px;
     top: 61px;
 }
 
+h1{
+    color: aqua;
+    font-family: fantasy;
+    text-align: center;
+}
+
+.ra{
+    color: wheat;
+    margin: 0px;
+    text-align: center;
+    width: 400px;
+    border: 2px solid white;
+    border-radius: 3px;
+}
+
+.informacoes{
+    color: aliceblue;
+    padding: 0;
+    float: left;
+    width: 500px;
+    text-align: justify;
+}
