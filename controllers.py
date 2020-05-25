@@ -10,18 +10,18 @@ def index():
     presencas = Presenca.recupera_todas()
     menu = []
     menu.append({'active': True,
-                'href': '/',
-                'texto': 'Página principal'})
+                 'href': '/',
+                 'texto': 'Página principal'})
     menu.append({'active': False,
-                'href': '/presenca',
-                'texto': 'Presença'})
+                 'href': '/presenca',
+                 'texto': 'Presença'})
     menu.append({'active': False,
-                'href':'/integrantes',
-                'texto': 'Integrantes'})
+                 'href': '/integrantes',
+                 'texto': 'Integrantes'})
 
     context = {'titulo': 'Página principal',
-            'menu': menu,
-            'presencas': presencas}
+               'menu': menu,
+               'presencas': presencas}
 
     return render_template('index.html', **context)
 
@@ -36,8 +36,8 @@ def presenca():
                  'href': '/presenca',
                  'texto': 'Presença'})
     menu.append({'active': False,
-                'href':'/integrantes',
-                'texto': 'Integrantes'})
+                 'href': '/integrantes',
+                 'texto': 'Integrantes'})
 
     context = {'titulo': 'Presença',
                'menu': menu}
@@ -61,9 +61,9 @@ def integrantes():
                  'href': '/presenca',
                  'texto': 'Presença'})
     menu.append({'active': True,
-                'href':'/integrantes',
-                'texto': 'Integrantes'})
-    
+                 'href': '/integrantes',
+                 'texto': 'Integrantes'})
+
     context = {'titulo': 'Integrantes',
                'menu': menu}
 
@@ -80,11 +80,11 @@ def lucas():
                  'href': '/presenca',
                  'texto': 'Presença'})
     menu.append({'active': False,
-                'href':'/integrantes',
-                'texto': 'Integrantes'})
+                 'href': '/integrantes',
+                 'texto': 'Integrantes'})
 
     context = {'titulo': 'Lucas Sousa',
-                'menu': menu}
+               'menu': menu}
 
     return render_template('lucas.html', **context)
 
@@ -99,13 +99,31 @@ def maria():
                  'href': '/presenca',
                  'texto': 'Presença'})
     menu.append({'active': False,
-                'href':'/integrantes',
-                'texto': 'Integrantes'})
+                 'href': '/integrantes',
+                 'texto': 'Integrantes'})
 
     context = {'titulo': 'Maria Vitoria',
-                'menu': menu}
+               'menu': menu}
 
     return render_template('Maria.html', **context)
+
+
+@app.route('/leandro')
+def leandro():
+    menu = []
+    menu.append({'active': False,
+                 'href': '/',
+                 'texto': 'Página principal'})
+    menu.append({'active': False,
+                 'href': '/presenca',
+                 'texto': 'Presença'})
+    menu.append({'active': False,
+                 'href': '/integrantes',
+                 'texto': 'Integrantes'})
+
+    context = {'menu': menu}
+
+    return render_template('leandro.html', **context)
 
 
 app.run()

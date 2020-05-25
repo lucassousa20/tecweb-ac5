@@ -1,0 +1,18 @@
+body{
+    background-color: black;
+}
+
+h1{
+    color: aqua;
+    display: flex;
+}
+
+.lateral_direita{
+    position: absolute;
+    height: 789px;
+    width: 592;
+    z-index: -1;
+    right: 1px;
+    top: 61px;
+}
+
