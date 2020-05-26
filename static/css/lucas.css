@@ -1,5 +1,6 @@
 body{
-    background-color: aqua;
+    background-color: black;
+    color: white;
 }
 
 h1{
@@ -9,7 +10,17 @@ h1{
 #text{
     position: absolute;
     bottom:0;
-    align-items: center;
-    margin-left: 350px;
+
+    
     font-size: large;
 }
+
+
+#photo{
+    position: absolute; 
+    bottom: 0;
+    margin-left: 180px;
+    padding: 0;
+    width: auto;
+}
+
