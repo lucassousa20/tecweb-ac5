@@ -1,0 +1,10 @@
+body{
+    background-color:#ed145b;
+}
+
+#texto{
+    position: absolute;
+    bottom: 0;
+    margin-left: 440px;
+    align-items: center;
+}
