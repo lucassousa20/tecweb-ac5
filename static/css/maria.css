@@ -1,9 +1,25 @@
 body {
-  background-color: blueviolet;
+  background-color: rgba(0, 0, 0, 0.418);
 }
 
-#texto{
-  position: absolute;
-  bottom:0;
-  margin-left: 350px;
+#nome{
+  color: white;
+}
+
+h1{
+  font-family: fantasy;
+  color: black;
+  text-align: center;
+  border: 2px solid black;
+  border-radius: 3px;
+}
+
+.texto{
+  color: black;
+  text-align: center;
+}
+
+.texto2{
+  color: black;
+  text-align: center;
 }
