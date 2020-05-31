@@ -1,15 +1,36 @@
 body{
-    background-color: aqua;
+    background-color: black;
+    color: white;
+}
+
+@keyframes neon {
+    from { 
+        filter: drop-shadow(0 0 0px  rgb(3, 238, 255));
+    }
+    to {
+        filter: drop-shadow(0 0 100px red);
+    }
 }
 
 h1{
     font-family: fantasy;
+    animation: neon 2s alternate infinite ease-in;
 }
 
 #text{
     position: absolute;
     bottom:0;
-    align-items: center;
-    margin-left: 350px;
+
+    
     font-size: large;
 }
+
+
+#photo{
+    position: absolute; 
+    bottom: 0;
+    margin-left: 180px;
+    padding: 0;
+    width: auto;
+}
+

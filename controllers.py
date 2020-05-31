@@ -107,7 +107,6 @@ def maria():
 
     return render_template('Maria.html', **context)
 
-
 @app.route('/leandro')
 def leandro():
     menu = []
@@ -122,6 +121,29 @@ def leandro():
                  'texto': 'Integrantes'})
 
     context = {'menu': menu}
+
+    return render_template('leandro.html', **context)
+
+
+@app.route('/kennedy')
+def kennedy():
+    menu = []
+    menu.append({'active': False,
+                 'href': '/',
+                 'texto': 'Página principal'})
+    menu.append({'active': False,
+                 'href': '/presenca',
+                 'texto': 'Presença'})
+    menu.append({'active': False,
+                'href':'/integrantes',
+                'texto': 'Integrantes'})
+
+    context = {'titulo': 'Kennedy Silva',
+                'menu': menu}
+
+    return render_template('kennedy.html', **context)
+
+
 
     return render_template('leandro.html', **context)
 
