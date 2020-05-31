@@ -1,4 +1,4 @@
-from aplicacao import app
+from app import app
 from flask import render_template
 from flask import redirect
 from flask import request
